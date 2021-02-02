@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Form DCW</title>
+	<link href="login.css" rel="stylesheet">
+</head>
+<body>
+	<img src="..//LAB03/assets/head.jpg" alt="Heading Pix" width="300" height="300" class="avatar">
+	<h1>DCW HTML CHECKPOINT</h1>
+	<h2>NAME : NATTHAWUT THIPPASOET</h2>
+	<h3>STUDENT ID : 5935512064</h3>
+	<button onclick="document.getElementById('id01').style.display='block'" style="width:250px;">Login</button>
+	<button onclick="document.getElementById('id02').style.display='block'" style="width:250px;" class="regisbtn" >Register</button>
+	
+	<div id="id01" class="modal">
+		<form class="modal-content animate" action="#">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      			<img src="../LAB03/assets/brand/icon.png" alt="Avatar" width="200" height="200" class="avatar">
+			</div>
+			
+    		<div class="container">
+      			<label for="uname"><b>Username</b></label>
+				<input type="text" placeholder="Enter Username" id="uname" required>
+				<label for="psw"><b>Password</b></label>
+      			<input type="password" placeholder="Enter Password" id="psw" required>
+      			<button onclick="myFunction()">Login</button>
+      			<label>
+        			<input type="checkbox" checked="checked" name="remember"> Remember me
+      			</label>
+    		</div>
+			<div class="container" style="background-color:#f1f1f1">
+      			<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      			<span class="psw">Forgot <a href="#">Password?</a></span>
+    		</div>
+  		</form>
+	</div>
+
+	<div id="id02" class="modal">
+		<form class="modal-content animate" action="/action_page.php" method="post">
+			<div class="imgcontainer">
+				<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      			<img src="../LAB03/assets/brand/regis.png" alt="Avatar" width="200" height="200">
+    		</div>
+			<div class="container">
+				  <h1>Register</h1>
+				  <p>Please fill in this form to create an account.</p>
+				  <hr>
+				  <label for="email"><b>Email</b></label>
+				  <input type="text" placeholder="Enter Email" name="email" id="email" required>
+			  
+				  <label for="psw"><b>Password</b></label>
+				  <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+			  
+				  <label for="psw-repeat"><b>Repeat Password</b></label>
+				  <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+				  <hr>
+				  <button type="submit" class="registerbtn">Register</button>
+				</div>
+		  </form>
+	</div>
+
+
+
+<script>
+var modal = document.getElementById('id01');
+var modal = document.getElementById('id02');
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+function myFunction() {
+	if(document.getElementById("uname").value == "foo" && document.getElementById("psw").value == "bar")
+	  	alert("Login Success");
+	else
+		alert("Get Out!");
+}
+
+</script>
+
+</body>
+</html>
